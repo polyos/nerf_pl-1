@@ -1,11 +1,11 @@
-torch==1.4.0
-torchvision==0.5.0
-pytorch-lightning==0.7.5
-test-tube
-kornia==0.2.0
-opencv-python==4.2.0.34
-matplotlib
-jupyter
+torch==1.10.2
+torchvision==0.11.3
+pytorch-lightning==1.5.10
+test-tube==0.7.5
+kornia==0.6.3
+opencv-python==4.5.5.62
+matplotlib==3.3.4
+jupyter==1.0.0
 
 # for mesh
 PyMCubes
