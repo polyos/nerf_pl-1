@@ -134,3 +134,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+*.png
+datasets/lego/.DS_Store
+datasets/lego/test/.DS_Store
+datasets/lego/transforms_test.json
+datasets/lego/transforms_train.json
+datasets/lego/transforms_val.json
