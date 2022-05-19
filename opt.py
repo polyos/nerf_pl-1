@@ -4,7 +4,8 @@ def get_opts():
     parser = argparse.ArgumentParser()
 
     parser.add_argument('--root_dir', type=str,
-                        default='/home/ubuntu/data/nerf_example_data/nerf_synthetic/lego',
+                        # default='/home/ubuntu/data/nerf_example_data/nerf_synthetic/lego',
+                        default='C:/Users/changha/Documents/GitHub/nerf_pl/datasets/lego',
                         help='root directory of dataset')
     parser.add_argument('--dataset_name', type=str, default='blender',
                         choices=['blender', 'llff'],
