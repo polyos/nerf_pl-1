@@ -181,9 +181,10 @@ if __name__ == '__main__':
                       enable_model_summary=None,
                       progress_bar_refresh_rate=1,
                       gpus=hparams.num_gpus,
-                      strategy="ddp_spawn",
+                      strategy=None,
+                       # strategy="ddp_spawn",
                     #   distributed_backend='ddp' if hparams.num_gpus>1 else None,
-                      num_sanity_val_steps=1,
+                      num_sanity_val_steps=0,
                       benchmark=True,
                       profiler=profiler_setting )
 
