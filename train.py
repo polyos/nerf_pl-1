@@ -22,7 +22,10 @@ from metrics import *
 # pytorch-lightning
 from pytorch_lightning.callbacks import ModelCheckpoint
 from pytorch_lightning import LightningModule, Trainer
-from pytorch_lightning.loggers import TestTubeLogger, TensorBoardLogger
+# from pytorch_lightning.loggers import TestTubeLogger
+from pytorch_lightning.loggers import TensorBoardLogger
+
+os.environ['KMP_DUPLICATE_LIB_OK']='True'
 
 class NeRFSystem(LightningModule):
     def __init__(self, hparams):
@@ -179,8 +182,9 @@ if __name__ == '__main__':
                       resume_from_checkpoint=hparams.ckpt_path,
                       logger=logger,
                       enable_model_summary=None,
-                      progress_bar_refresh_rate=1,
-                      gpus=hparams.num_gpus,
+                    #  progress_bar_refresh_rate=1,
+                      accelerator='gpu',
+                      devices=hparams.num_gpus,
                       strategy=None,
                        # strategy="ddp_spawn",
                     #   distributed_backend='ddp' if hparams.num_gpus>1 else None,
